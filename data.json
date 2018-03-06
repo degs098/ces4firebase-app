@@ -1,0 +1,84 @@
+{
+    "rooms": [
+        {
+            "id": 0,
+            "name": "Room One",
+            "location": "First Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200                  
+        },
+        {
+            "id": 1,
+            "name": "Room Two",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 2,
+            "name": "Room Three",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 3,
+            "name": "Room Four",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 4,
+            "name": "Room Five",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 5,
+            "name": "Room Six",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 6,
+            "name": "Room Seven",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 7,
+            "name": "Room Eight",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 8,
+            "name": "Room Nine",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        },
+        {
+            "id": 9,
+            "name": "Room Ten",
+            "location": "Second Floor",
+            "lastCleanup": 1514764800,
+            "capacity": 12,
+            "createdAt": 1520035200
+        }
+    ]    
+}

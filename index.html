@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase App</title>
+    <link rel="stylesheet" href="main.css">    
+    
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>    
+    <script src="firebase-config.js" type="text/javascript"></script>
+</head>
+<body ng-app="firebase-app">
+    
+    <div ng-controller="AppCtrl as vm">        
+        <table id="rooms" colspan="2">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Capacity</th>
+                <th>Last Clean Up Date</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="room in vm.rooms">
+                    <td ng-cloak>{{room.id}}</td>
+                    <td ng-cloak>{{room.name}}</td>
+                    <td ng-cloak>{{room.capacity}}</td>
+                    <td ng-cloak>{{room.lastCleanup | date}}</td>
+                    <td>
+                        <button ng-click="vm.editRoom(room)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>        
+
+        <button ng-click="vm.getRooms()">List Rooms</button>
+
+        <br><br>
+        <div ng-if="vm.isEditingRoom">
+            <h3>Room form</h3>
+            <form name="roomForm">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="roomId">Id</label>
+                                <br>
+                                <input type="number" name="roomId" id="roomId" ng-model="vm.roomInfo.id" ng-disabled="true" required>
+                            </td>
+                            <td>
+                                <label for="roomName">Name</label>
+                                <br>
+                                <input type="text" name="roomName" id="roomName" ng-model="vm.roomInfo.name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="roomCapacity">Capacity</label>
+                                <br>
+                                <input type="number" name="roomCapacity" id="roomCapacity" ng-model="vm.roomInfo.capacity" required>
+                            </td>
+                            <td>
+                                <label for="roomLastCleanup">Last cleanup date</label>
+                                <br>
+                                <input type="date" name="roomLastCleanup" id="roomLastCleanup" ng-model="vm.roomInfo.lastCleanup" required>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <button ng-click="vm.saveRoom(roomForm)">Guardar</button>
+                                <button ng-click="vm.cancelEdit()" type="reset">Limpiar</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+        </div>
+    </div>        
+    
+    <script src="app/src/app.js" type="text/javascript"></script>
+    <script src="app/src/controllers/app.controller.js" type="text/javascript"></script>
+</body>
+</html>
